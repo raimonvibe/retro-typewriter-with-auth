@@ -1,26 +1,50 @@
-// components/ui/avatar.tsx
+
 "use client";
 
+import * as React from "react";
+
 type AvatarProps = {
-  name: string;
-  image?: string;
+  children: React.ReactNode;
+  className?: string;
 };
 
-export function Avatar({ name, image }: AvatarProps) {
+type AvatarImageProps = {
+  src: string;
+  alt: string;
+  className?: string;
+};
+
+type AvatarFallbackProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export function Avatar({ children, className }: AvatarProps) {
   return (
-    <div className="flex items-center gap-2">
-      {image ? (
-        <img
-          src={image}
-          alt={name}
-          className="w-8 h-8 rounded-full object-cover"
-        />
-      ) : (
-        <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">
-          {name.charAt(0).toUpperCase()}
-        </div>
-      )}
-      <span className="text-sm text-white">{name}</span>
+    <div
+      className={`relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 overflow-hidden ${className ?? ""}`}
+    >
+      {children}
     </div>
+  );
+}
+
+export function AvatarImage({ src, alt, className }: AvatarImageProps) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={`h-full w-full object-cover ${className ?? ""}`}
+    />
+  );
+}
+
+export function AvatarFallback({ children, className }: AvatarFallbackProps) {
+  return (
+    <span
+      className={`text-sm font-medium text-gray-600 select-none ${className ?? ""}`}
+    >
+      {children}
+    </span>
   );
 }
