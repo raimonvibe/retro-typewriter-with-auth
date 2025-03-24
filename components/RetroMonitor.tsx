@@ -436,10 +436,10 @@ export default function RetroMonitor() {
             )}
 
             {/* Navigation */}
-            <div className="flex justify-between mt-6 font-mono">
+              <div className="flex flex-col sm:flex-row justify-between gap-2 mt-6 font-mono">
               <button
                 onClick={() => setCurrentQuestionIndex((prev) => (prev - 1 + questions.length) % questions.length)}
-                className="nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
+                className="w-full sm:w-auto nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4 mr-1 text-amber-500" /> Prev
               </button>
@@ -447,7 +447,7 @@ export default function RetroMonitor() {
               {!isTypingQuestion && typingComplete && (
                 <button
                   onClick={handleBackToQuestion}
-                  className="nav-button text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
+               className="w-full sm:w-auto nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
                 >
                   Back to Question
                 </button>
@@ -455,7 +455,7 @@ export default function RetroMonitor() {
 
               <button
                 onClick={() => setCurrentQuestionIndex((prev) => (prev + 1) % questions.length)}
-                className="nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
+              className="w-full sm:w-auto nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
               >
                 Next <ChevronRight className="w-4 h-4 ml-1 text-amber-500" />
               </button>
