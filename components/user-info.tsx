@@ -18,10 +18,12 @@ export function UserInfo() {
     <div className="retro-monitor text-yellow-100 border-yellow-600">
       <div className="mb-4">
         <p>
-          <strong className="text-yellow-400">Name:</strong> {session?.user?.name}
+          <strong className="text-yellow-400">Name:</strong>{' '}
+          <span className="typewriter-text">{session?.user?.name}</span>
         </p>
         <p>
-          <strong className="text-yellow-400">Email:</strong> {session?.user?.email}
+          <strong className="text-yellow-400">Email:</strong>{' '}
+          <span className="typewriter-text">{session?.user?.email}</span>
         </p>
       </div>
       <button
