@@ -20,7 +20,7 @@ export default async function Page() {
           </div>
         </div>
       ) : (
-        <div className="w-full max-w-4xl flex flex-col items-center gap-6">
+        <div className="w-full">
           <UserInfo />
           <RetroMonitor />
         </div>
@@ -28,3 +28,5 @@ export default async function Page() {
     </main>
   )
 }
+
+
