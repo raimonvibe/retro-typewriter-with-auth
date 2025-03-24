@@ -109,4 +109,19 @@
     @apply flex flex-col md:flex-row justify-between mt-6 space-y-2 md:space-y-0 md:space-x-4;
   }
 }
+.spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.2rem solid transparent;
+  border-top-color: #e68500; /* Amber kleur */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
