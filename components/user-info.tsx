@@ -15,7 +15,7 @@ export function UserInfo() {
   }
 
   return (
-      <div className="animate-fade-in self-end w-full max-w-xs md:max-w-sm bg-gray-950/80 text-yellow-200 p-4 md:p-5 border border-yellow-500 shadow-[0_0_12px_rgba(255,193,7,0.2)] rounded-md backdrop-blur-sm">
+    <div className="animate-fade-in self-end w-full max-w-xs md:max-w-sm bg-gray-950/80 text-yellow-200 p-4 md:p-5 border border-yellow-500 shadow-[0_0_12px_rgba(255,193,7,0.2)] rounded-md backdrop-blur-sm">
       <div className="mb-4">
         <p>
           <strong className="text-yellow-400">Name:</strong>{' '}
