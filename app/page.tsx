@@ -20,7 +20,7 @@ export default async function Page() {
           </div>
         </div>
       ) : (
-        <div className="w-full">
+        <div className="w-full max-w-4xl flex flex-col items-center gap-6">
           <UserInfo />
           <RetroMonitor />
         </div>
