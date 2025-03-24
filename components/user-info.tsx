@@ -15,7 +15,7 @@ export function UserInfo() {
   }
 
   return (
-    <div className="w-full max-w-sm md:max-w-md bg-gray-900 text-yellow-300 p-4 md:p-6 border-2 border-yellow-500 shadow-[0_0_20px_4px_rgba(255,193,7,0.15)] rounded-lg mx-auto md:mx-0 md:absolute md:top-6 md:right-6 z-50">
+     <div className="w-full max-w-xs md:max-w-sm bg-gray-950/80 text-yellow-200 p-4 md:p-5 border border-yellow-500 shadow-[0_0_12px_rgba(255,193,7,0.2)] rounded-md md:absolute md:top-8 md:right-8 z-40 backdrop-blur-sm">
       <div className="mb-4">
         <p>
           <strong className="text-yellow-400">Name:</strong>{' '}
