@@ -15,22 +15,21 @@ export function UserInfo() {
   }
 
   return (
-    <div className="p-4 bg-gray-100 rounded-lg">
+    <div className="retro-monitor text-yellow-100 border-yellow-600">
       <div className="mb-4">
         <p>
-          <strong>Name:</strong> {session?.user?.name}
+          <strong className="text-yellow-400">Name:</strong> {session?.user?.name}
         </p>
         <p>
-          <strong>Email:</strong> {session?.user?.email}
+          <strong className="text-yellow-400">Email:</strong> {session?.user?.email}
         </p>
       </div>
       <button
-      onClick={() => signOut()}
-      className="bg-amber-500 hover:bg-amber-600 text-black px-4 py-2 rounded font-mono transition-colors"
-    >
-      Sign out
-    </button>
-
+        onClick={() => signOut()}
+        className="bg-amber-500 hover:bg-amber-600 text-black px-4 py-2 rounded font-mono transition-colors"
+      >
+        Sign out
+      </button>
     </div>
   )
 }
