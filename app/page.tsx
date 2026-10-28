@@ -2,9 +2,7 @@ import { getServerSession } from "next-auth"
 import { authOptions } from "@/lib/auth"
 import { LoginButton } from "@/components/login-button"
 import { UserInfo } from "@/components/user-info"
-import dynamic from "next/dynamic"
-
-const RetroMonitor = dynamic(() => import("@/components/RetroMonitor"), { ssr: false })
+import RetroMonitor from "@/components/RetroMonitorClient"
 
 export default async function Page() {
   const session = await getServerSession(authOptions)
